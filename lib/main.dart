@@ -13,7 +13,16 @@ class App extends StatelessWidget{
           title:Text("起步")
         ),
         body: Center(
-         child:Text('Hello World',style: TextStyle(fontSize:30),)
+         child:Text('Hello World,接下去要不断的学习 提高自己的竞争力 别再浑浑噩噩 未来不迷茫',
+         style: TextStyle(
+           fontSize:20,
+           decoration: TextDecoration.underline,
+           decorationColor: Colors.red,
+           decorationStyle:TextDecorationStyle.dotted
+           ),
+         textAlign: TextAlign.center,
+         maxLines: 2,
+         overflow: TextOverflow.fade,)
         ),
       ),
     );
