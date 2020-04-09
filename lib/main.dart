@@ -3,27 +3,32 @@ main(List<String> args) {
   runApp(App());
 }
 
-class App extends StatelessWidget{
+class App extends StatelessWidget{ 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title:'我是标题',
+      title: "Container",
       home: Scaffold(
         appBar: AppBar(
-          title:Text("起步")
+            title:Text('Container'),
         ),
         body: Center(
-         child:Text('Hello World,接下去要不断的学习 提高自己的竞争力 别再浑浑噩噩 未来不迷茫',
-         style: TextStyle(
-           fontSize:20,
-           decoration: TextDecoration.underline,
-           decorationColor: Colors.red,
-           decorationStyle:TextDecorationStyle.dotted
-           ),
-         textAlign: TextAlign.center,
-         maxLines: 2,
-         overflow: TextOverflow.fade,)
+          child: Container(
+            height: 200,
+            margin: EdgeInsets.all(10),
+            padding: EdgeInsets.all(30),
+            decoration: BoxDecoration(
+              gradient: LinearGradient(colors: [
+                Colors.purple,
+                Colors.blue
+              ]),
+              border: Border.all(width:5,color:Colors.black),
+              borderRadius: BorderRadius.circular(10)
+             ),
+            child: Text("使用Container",style: TextStyle(fontSize:25),),
+            alignment: Alignment.bottomCenter,
         ),
+        )
       ),
     );
 }
