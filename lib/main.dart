@@ -29,6 +29,9 @@ class Content extends State{
         body: list[currentIndex],
         // 1.创建BottomNavigationBar
         bottomNavigationBar: BottomNavigationBar(
+          selectedItemColor: Colors.orange,
+          unselectedItemColor: Colors.grey,
+          type:BottomNavigationBarType.fixed,
           items:[
             BottomNavigationBarItem(
               icon:Icon(Icons.home),
