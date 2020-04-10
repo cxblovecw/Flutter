@@ -12,22 +12,18 @@ class App extends StatelessWidget{
         appBar: AppBar(
             title:Text('Container'),
         ),
-        body: Center(
-          child: Container(
-            height: 200,
-            margin: EdgeInsets.all(10),
-            padding: EdgeInsets.all(30),
-            decoration: BoxDecoration(
-              gradient: LinearGradient(colors: [
-                Colors.purple,
-                Colors.blue
-              ]),
-              border: Border.all(width:5,color:Colors.black),
-              borderRadius: BorderRadius.circular(10)
-             ),
-            child: Text("使用Container",style: TextStyle(fontSize:25),),
-            alignment: Alignment.bottomCenter,
-        ),
+        body: Column(
+         children: <Widget>[
+           Container(
+            child: Image.network("https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1586499494712&di=7a58119bfdb6fbac2e37d8aa25ec1994&imgtype=0&src=http%3A%2F%2Fa.hiphotos.baidu.com%2Fzhidao%2Fpic%2Fitem%2Fa6efce1b9d16fdfabf36882ab08f8c5495ee7b9f.jpg",fit: BoxFit.contain,
+            // color: Colors.yellow,colorBlendMode: BlendMode.darken,
+            ), 
+            width: 200,height: 200,color: Colors.lightBlue,
+           ),
+           Container(
+             child:Image.asset("assets/images/lion.jpg")
+           )
+         ],
         )
       ),
     );
