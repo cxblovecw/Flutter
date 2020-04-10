@@ -7,19 +7,30 @@ class App extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title:'Row',
+      title:'Card', 
       home: Scaffold(
         appBar: AppBar(
-          title:Text("Row Widget")
+          title:Text("Card")
         ),
-        body:Column(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children:<Widget>[
-            Text("Hello World"),
-            Expanded(child: Text("Flutter中的ColumnWidget")),
-            Text("Hello Flutter")
-          ]
+        body:Card(
+          child:ListView(
+            children:<Widget>[
+              ListTile(
+                leading:Icon(Icons.list),
+                title:Text("List"),
+              ),
+              Divider(),
+              ListTile(
+                leading:Icon(Icons.list),
+                title:Text("List"),
+              ),
+              Divider(),
+              ListTile(
+                leading:Icon(Icons.list),
+                title:Text("List"),
+              ),
+            ]
+          )
         )
         ) 
     );
