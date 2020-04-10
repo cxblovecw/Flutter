@@ -12,24 +12,16 @@ class App extends StatelessWidget{
         appBar: AppBar(
           title:Text("Row Widget")
         ),
-        body:Row(
-            children:<Widget>[
-              Expanded(
-                flex: 1,
-                child: RaisedButton(
-                  onPressed: (){},
-                  color:Colors.green,
-                  child: Text("Green Button")
-                  )
-                ),
-            Expanded(
-              flex: 1,
-              child: RaisedButton(onPressed: (){},color:Colors.red,child: Text("Red Button"))),
-            Expanded(
-              flex: 3,
-            child: RaisedButton(onPressed: (){},color:Colors.orange,child: Text("Orange Button"))),]
-            )
-            ) 
+        body:Column(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children:<Widget>[
+            Text("Hello World"),
+            Expanded(child: Text("Flutter中的ColumnWidget")),
+            Text("Hello Flutter")
+          ]
+        )
+        ) 
     );
 }
 }
