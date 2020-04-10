@@ -7,15 +7,29 @@ class App extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title:'我是标题',
+      title:'Row',
       home: Scaffold(
         appBar: AppBar(
-          title:Text("起步")
+          title:Text("Row Widget")
         ),
-        body: Center(
-         child:Text('Hello World',style: TextStyle(fontSize:30),)
-        ),
-      ),
+        body:Row(
+            children:<Widget>[
+              Expanded(
+                flex: 1,
+                child: RaisedButton(
+                  onPressed: (){},
+                  color:Colors.green,
+                  child: Text("Green Button")
+                  )
+                ),
+            Expanded(
+              flex: 1,
+              child: RaisedButton(onPressed: (){},color:Colors.red,child: Text("Red Button"))),
+            Expanded(
+              flex: 3,
+            child: RaisedButton(onPressed: (){},color:Colors.orange,child: Text("Orange Button"))),]
+            )
+            ) 
     );
 }
 }
