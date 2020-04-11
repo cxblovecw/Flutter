@@ -57,7 +57,18 @@ class Detail extends StatelessWidget{
         title:Text("商品详情页面")
       ),
       body:Center(
-        child:Text("这是商品${name}的详情页面，详情信息是:${description}")
+        child:Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            Text("这是商品${name}的详情页面，详情信息是:${description}"),
+            RaisedButton(
+              child: Text("返回"),
+              onPressed: (){
+                Navigator.pop(context);
+              },
+            )
+          ],
+        )
       )
     );
   }
