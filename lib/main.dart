@@ -1,21 +1,18 @@
-import "package:flutter/material.dart";
-main(List<String> args) {
-  runApp(App());
-}
+import 'package:flutter/material.dart';
+import 'package:flutter2/searchBar.dart';
 
-class App extends StatelessWidget{
+void main()=>runApp(MyApp());
+
+class MyApp extends StatelessWidget {
+  const MyApp({Key key}) : super(key: key);
+  
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title:'我是标题',
-      home: Scaffold(
-        appBar: AppBar(
-          title:Text("起步")
-        ),
-        body: Center(
-         child:Text('Hello World',style: TextStyle(fontSize:30),)
-        ),
-      ),
+      title: "SearchBar",
+      theme: ThemeData.light(),
+      home: SearchBar(),
     );
+  }
 }
-}
+
